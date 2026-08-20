@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thanks — prospr</title>
+<link rel="canonical" href="https://prospr.studio/thank-you.html">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="description" content="Thanks for reaching out to prospr — we'll be in touch within one business day.">
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fbfbf7;
+    --bg-alt: #f2f6ee;
+    --ink: #0d0f0c;
+    --ink-soft: #4d564c;
+    --line: #e2e8dd;
+    --card: #ffffff;
+    --green: #55b8b4;
+    --green-deep: #3d8f8c;
+    --green-mist: #e8f5f4;
+    --radius: 14px;
+    --radius-lg: 22px;
+    --shadow-sm: 0 2px 8px rgba(13,15,12,0.06);
+    --shadow-md: 0 10px 32px rgba(13,15,12,0.10);
+    --shadow-lg: 0 26px 70px rgba(13,15,12,0.16);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'DM Sans',sans-serif; color:var(--ink); background:var(--bg-alt); overflow-x:hidden; line-height:1.6; }
+  h1,h2,h3 { font-family:'Plus Jakarta Sans',sans-serif; line-height:1.15; color:var(--ink); }
+  a { color:inherit; }
+  img { max-width:100%; display:block; }
+  .wrap { max-width:1240px; margin:0 auto; padding:0 24px; }
+
+  /* NAV */
+  header { position:fixed; top:16px; left:16px; right:16px; z-index:100; }
+  .nav { max-width:1240px; margin:0 auto; background:var(--card); border:1px solid var(--line); border-radius:20px; box-shadow:var(--shadow-md); padding:0 18px; height:66px; display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:16px; }
+  .nav-logo { display:flex; align-items:center; }
+  .nav-logo img { height:30px; width:auto; }
+  .nav-links { display:flex; align-items:center; justify-content:center; gap:6px; }
+  .nav-links a { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:14px; color:var(--ink-soft); text-decoration:none; padding:9px 14px; border-radius:8px; transition:color 0.2s, background 0.2s; white-space:nowrap; }
+  .nav-links a:hover { color:var(--green-ink,var(--green-deep)); background:var(--green-mist); }
+  .nav-cta { background:var(--green); color:var(--card); padding:11px 22px; border-radius:10px; font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:14px; text-decoration:none; white-space:nowrap; transition:filter 0.2s, transform 0.2s; box-shadow:0 6px 18px -8px rgba(61,143,139,0.55); }
+  .nav-cta:hover { filter:brightness(0.95); transform:translateY(-1px); }
+  .nav-burger { display:none; flex-direction:column; justify-content:center; gap:5px; width:34px; height:34px; background:none; border:none; cursor:pointer; padding:0; }
+  .nav-burger span { display:block; width:22px; height:2px; background:var(--ink); border-radius:2px; transition:transform 0.25s, opacity 0.25s; }
+  @media (max-width:860px) {
+    .nav-links { display:none; }
+    .nav { grid-template-columns:auto auto auto; gap:10px; }
+    .nav-burger { display:flex; }
+    .nav-cta { padding:9px 16px; font-size:13px; }
+  }
+  @media (max-width:400px) {
+    .nav-cta { display:none; }
+    .nav { grid-template-columns:auto auto; }
+  }
+
+  /* MOBILE NAV DRAWER */
+  .mobile-nav-overlay { position:fixed; inset:0; background:rgba(13,15,12,0.55); z-index:150; opacity:0; pointer-events:none; transition:opacity 0.25s ease; }
+  .mobile-nav-overlay.open { opacity:1; pointer-events:all; }
+  .mobile-nav { position:fixed; top:0; right:0; bottom:0; width:min(300px,82vw); background:var(--card); z-index:200; box-shadow:-10px 0 40px rgba(13,15,12,0.2); transform:translateX(100%); transition:transform 0.35s cubic-bezier(0.4,0,0.2,1); display:flex; flex-direction:column; padding:22px 24px 32px; }
+  .mobile-nav.open { transform:translateX(0); }
+  .mobile-nav-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:24px; }
+  .mobile-nav-close { width:36px; height:36px; border-radius:10px; background:var(--bg-alt); border:none; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:20px; color:var(--ink-soft); }
+  .mobile-nav-links { display:flex; flex-direction:column; gap:2px; }
+  .mobile-nav-links a { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:16.5px; color:var(--ink); text-decoration:none; padding:14px 4px; border-bottom:1px solid var(--line); transition:color 0.2s; }
+  .mobile-nav-links a:hover { color:var(--green-deep); }
+  .mobile-nav .nav-cta { display:flex; align-items:center; justify-content:center; width:100%; margin-top:24px; }
+  @media (min-width:861px) { .mobile-nav, .mobile-nav-overlay { display:none; } }
+
+  /* THANK YOU */
+  .thanks { padding:170px 24px 120px; text-align:center; position:relative; overflow:hidden; }
+  .thanks::before { content:''; position:absolute; top:-160px; left:50%; transform:translateX(-50%); width:600px; height:600px; border-radius:50%; background:radial-gradient(circle, rgba(85,184,180,0.22) 0%, transparent 70%); pointer-events:none; }
+  .thanks-icon { width:76px; height:76px; border-radius:50%; background:var(--green-mist); display:flex; align-items:center; justify-content:center; margin:0 auto 28px; position:relative; }
+  .thanks-icon svg { width:36px; height:36px; stroke:var(--green-deep); }
+  .thanks h1 { font-size:clamp(30px,4.2vw,46px); font-weight:800; letter-spacing:-1.2px; margin-bottom:18px; position:relative; }
+  .thanks p { font-size:clamp(16px,2vw,18px); color:var(--ink-soft); max-width:560px; margin:0 auto 40px; position:relative; }
+  .thanks-ctas { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; position:relative; }
+  .btn-primary { background:var(--green); color:var(--card); padding:16px 30px; border-radius:12px; font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:16px; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; border:2px solid var(--green); transition:all 0.2s; box-shadow:0 10px 26px -10px rgba(61,143,139,0.55); }
+  .btn-primary:hover { background:var(--green-deep); border-color:var(--green-deep); color:var(--card); transform:translateY(-1px); box-shadow:0 14px 30px -10px rgba(61,143,139,0.6); }
+  .btn-secondary { background:transparent; color:var(--ink); padding:16px 30px; border-radius:12px; font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:16px; text-decoration:none; border:2px solid var(--line); display:inline-flex; align-items:center; justify-content:center; transition:all 0.2s; }
+  .btn-secondary:hover { border-color:var(--green-deep); color:var(--green-deep); }
+  .btn-primary:active, .btn-secondary:active { transform:scale(0.96); }
+
+  /* FOOTER */
+  .footer-bg { background:var(--bg-alt); display:flow-root; }
+  footer { background:var(--ink); margin:20px; border-radius:28px; padding:60px 40px 0; overflow:hidden; }
+  @media (max-width:640px) { footer { margin:12px; padding:44px 22px 0; } }
+  .footer-inner { max-width:1240px; margin:0 auto; }
+  .footer-top { display:flex; flex-wrap:wrap; justify-content:space-between; gap:36px; padding-bottom:48px; border-bottom:1px solid rgba(255,255,255,0.1); }
+  .footer-brand { flex:1 1 260px; max-width:300px; }
+  .footer-logo { height:28px; width:auto; margin-bottom:16px; filter:brightness(0) invert(1); }
+  .footer-brand p { font-size:14px; color:rgba(255,255,255,0.55); line-height:1.7; }
+  .footer-socials { display:flex; gap:10px; margin-top:16px; }
+  .footer-social-icon { width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; transition:background 0.2s, border-color 0.2s; text-decoration:none; }
+  .footer-social-icon svg { width:16px; height:16px; fill:rgba(255,255,255,0.7); }
+  .footer-social-icon:hover { background:var(--green); border-color:var(--green); }
+  .footer-social-icon:hover svg { fill:var(--ink); }
+  .footer-cols { display:flex; gap:56px; flex-wrap:wrap; }
+  .footer-col { display:flex; flex-direction:column; gap:12px; }
+  .footer-col h4 { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:13.5px; color:var(--card); margin-bottom:4px; letter-spacing:0.3px; }
+  .footer-col a, .footer-col p { font-size:14px; color:rgba(255,255,255,0.55); text-decoration:none; transition:color 0.2s; }
+  .footer-col a:hover { color:var(--green); }
+  .footer-bottom { display:flex; flex-wrap:wrap; gap:12px 24px; align-items:center; justify-content:space-between; padding:24px 0; }
+  .footer-bottom span { font-size:13px; color:rgba(255,255,255,0.35); }
+  .footer-legal-group { display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+  .footer-legal-link { font-size:13px; color:rgba(255,255,255,0.5); text-decoration:none; transition:color 0.2s; }
+  .footer-legal-link:hover { color:var(--green); }
+  .footer-quote-btn { background:var(--green); color:var(--card) !important; padding:11px 22px; border-radius:10px; font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:14px !important; text-decoration:none; white-space:nowrap; transition:filter 0.2s, transform 0.2s; box-shadow:0 6px 18px -8px rgba(61,143,139,0.55); display:inline-flex; align-items:center; justify-content:center; margin-top:8px; width:fit-content; }
+  .footer-quote-btn:hover { filter:brightness(0.95); color:var(--card) !important; transform:translateY(-1px); }
+  .footer-quote-btn:active { transform:scale(0.96); }
+
+  @media (max-width:640px) {
+    .thanks { padding:140px 20px 80px; }
+    .btn-primary, .btn-secondary { width:100%; max-width:320px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="nav-logo" href="index.html">
+      <img class="brand-logo" src="prospr-logo-trimmed.png" alt="prospr">
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#services">How We Can Help</a>
+      <a href="index.html#local">About prospr</a>
+      <a href="index.html#process">Our Process</a>
+      <a href="index.html#work">Local Results</a>
+      <a href="index.html#faq">FAQs</a>
+    </nav>
+    <a class="nav-cta" href="index.html#contact">Get a Free Quote</a>
+    <button type="button" class="nav-burger" id="nav-burger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+<div class="mobile-nav" id="mobile-nav">
+  <div class="mobile-nav-top">
+    <a class="nav-logo" href="index.html">
+      <img class="brand-logo" src="prospr-logo-trimmed.png" alt="prospr" style="height:24px;">
+    </a>
+    <button type="button" class="mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">&times;</button>
+  </div>
+  <nav class="mobile-nav-links">
+    <a href="index.html#services">How We Can Help</a>
+    <a href="index.html#local">About prospr</a>
+    <a href="index.html#process">Our Process</a>
+    <a href="index.html#work">Local Results</a>
+    <a href="index.html#faq">FAQs</a>
+  </nav>
+  <a class="nav-cta" href="index.html#contact">Get a Free Quote</a>
+</div>
+
+<main>
+  <section class="thanks">
+    <div class="wrap">
+      <div class="thanks-icon">
+        <svg fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
+      <h1>We've received your enquiry.</h1>
+      <p>We're looking forward to hearing about your business. Our Wollongong team will be in touch within one business day.</p>
+      <div class="thanks-ctas">
+        <a class="btn-primary" href="index.html">Back to Home</a>
+        <a class="btn-secondary" href="index.html#work">See Local Results</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="footer-bg">
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img class="brand-logo footer-logo" src="prospr-logo-trimmed.png" alt="prospr">
+        <p>Wollongong &amp; Illawarra's local digital growth team — web design, SEO, branding and ads, handled.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/profile.php?id=61593570118918" class="footer-social-icon" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>How we can help</h4>
+          <a href="index.html#services">Web Design + Maintenance</a>
+          <a href="index.html#services">Local SEO</a>
+          <a href="index.html#services">Branding</a>
+          <a href="index.html#services">Google + Meta Ads</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="index.html#local">About prospr</a>
+          <a href="index.html#process">Our Process</a>
+          <a href="index.html#work">Local Results</a>
+          <a href="index.html#faq">FAQs</a>
+        </div>
+        <div class="footer-col">
+          <h4>Get in touch</h4>
+          <p>Wollongong, NSW</p>
+          <a href="mailto:hello@prospr.studio">hello@prospr.studio</a>
+          <a class="footer-quote-btn" href="index.html#contact">Get a Free Quote</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-legal-group">
+        <span>© 2026 prospr. All rights reserved.</span>
+        <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+      </div>
+      <span>Helping Illawarra businesses prospr.</span>
+    </div>
+  </div>
+</footer>
+</div>
+
+<script>
+(function () {
+  var burger = document.getElementById('nav-burger');
+  var closeBtn = document.getElementById('mobile-nav-close');
+  var drawer = document.getElementById('mobile-nav');
+  var overlay = document.getElementById('mobile-nav-overlay');
+  if (!burger || !drawer || !overlay) return;
+
+  function openDrawer() {
+    drawer.classList.add('open');
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  burger.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+  drawer.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeDrawer); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeDrawer(); });
+})();
+</script>
+
+</body>
+</html>

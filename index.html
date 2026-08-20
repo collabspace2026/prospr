@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wollongong Web Design &amp; Local SEO | prospr</title>
+<link rel="canonical" href="https://prospr.studio/">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="description" content="Web design, local SEO and Google &amp; Meta ads for Wollongong and Illawarra businesses. Get more leads, rank higher on Google, and grow — no long-term contracts.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="prospr">
+<meta property="og:title" content="Wollongong Web Design &amp; Local SEO | prospr">
+<meta property="og:description" content="Web design, local SEO and Google &amp; Meta ads for Wollongong and Illawarra businesses. Get more leads, rank higher on Google, and grow — no long-term contracts.">
+<meta property="og:url" content="https://prospr.studio/">
+<meta property="og:image" content="https://prospr.studio/og-banner.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wollongong Web Design &amp; Local SEO | prospr">
+<meta name="twitter:description" content="Web design, local SEO and Google &amp; Meta ads for Wollongong and Illawarra businesses. Get more leads, rank higher on Google, and grow — no long-term contracts.">
+<meta name="twitter:image" content="https://prospr.studio/og-banner.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+<style>
+  :root {
+    --bg: #fbfbf7;
+    --bg-alt: #f2f6ee;
+    --ink: #0d0f0c;
+    --ink-soft: #4d564c;
+    --line: #e2e8dd;
+    --card: #ffffff;
+    --green: #55b8b4;
+    --green-deep: #3d8f8c;
+    --green-ink: #1f5654;
+    --green-mist: #e8f5f4;
+    --radius: 14px;
+    --radius-lg: 22px;
+    --shadow-sm: 0 2px 8px rgba(13,15,12,0.06);
+    --shadow-md: 0 10px 32px rgba(13,15,12,0.10);
+    --shadow-lg: 0 26px 70px rgba(13,15,12,0.16);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'DM Sans',sans-serif; color:var(--ink); background:var(--bg); overflow-x:hidden; line-height:1.6; }
+  h1,h2,h3,h4 { font-family:'Plus Jakarta Sans',sans-serif; line-height:1.15; color:var(--ink); }
+  a { color:inherit; }
+  img { max-width:100%; display:block; }
+  .wrap { max-width:1240px; margin:0 auto; padding:0 24px; }
+
+  /* NAV */
+  header { position:fixed; top:16px; left:16px; right:16px; z-index:100; }
+  .nav { max-width:1240px; margin:0 auto; background:var(--card); border:1px solid var(--line); border-radius:20px; box-shadow:var(--shadow-md); padding:0 18px; height:66px; display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:16px; }
+  .nav-logo { display:flex; align-items:center; }
+  .nav-logo img { height:30px; width:auto; }
+  .nav-links { display:flex; align-items:center; justify-content:center; gap:6px; }
+  .nav-links a { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:14px; color:var(--ink-soft); text-decoration:none; padding:9px 14px; border-radius:8px; transition:color 0.2s, background 0.2s; white-space:nowrap; }
+  .nav-links a:hover { color:var(--green-ink); background:var(--green-mist); }
+  .nav-cta { background:var(--green); color:var(--card); padding:11px 22px; border-radius:10px; font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:14px; text-decoration:none; white-space:nowrap; transition:filter 0.2s, transform 0.2s; box-shadow:0 6px 18px -8px rgba(61,143,139,0.55); }
+  .nav-cta:hover { filter:brightness(0.95); transform:translateY(-1px); }
+  .nav-burger { display:none; flex-direction:column; justify-content:center; gap:5px; width:34px; height:34px; background:none; border:none; cursor:pointer; padding:0; }
+  .nav-burger span { display:block; width:22px; height:2px; background:var(--ink); border-radius:2px; transition:transform 0.25s, opacity 0.25s; }
+  @media (max-width:860px) {
+    .nav-links { display:none; }
+    .nav { grid-template-columns:auto auto auto; gap:10px; }
+    .nav-burger { display:flex; }
+    .nav-cta { padding:9px 16px; font-size:13px; }
+  }
+  @media (max-width:400px) {
+    .nav-cta { display:none; }
+    .nav { grid-template-columns:auto auto; }
+  }
+
+  /* MOBILE NAV DRAWER */
+  .mobile-nav-overlay { position:fixed; inset:0; background:rgba(13,15,12,0.55); z-index:150; opacity:0; pointer-events:none; transition:opacity 0.25s ease; }
+  .mobile-nav-overlay.open { opacity:1; pointer-events:all; }
+  .mobile-nav { position:fixed; top:0; right:0; bottom:0; width:min(300px,82vw); background:var(--card); z-index:200; box-shadow:-10px 0 40px rgba(13,15,12,0.2); transform:translateX(100%); transition:transform 0.35s cubic-bezier(0.4,0,0.2,1); display:flex; flex-direction:column; padding:22px 24px 32px; }
+  .mobile-nav.open { transform:translateX(0); }
+  .mobile-nav-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:24px; }
+  .mobile-nav-close { width:36px; height:36px; border-radius:10px; background:var(--bg-alt); border:none; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:20px; color:var(--ink-soft); }
+  .mobile-nav-links { display:flex; flex-direction:column; gap:2px; }
+  .mobile-nav-links a { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:16.5px; color:var(--ink); text-decoration:none; padding:14px 4px; border-bottom:1px solid var(--line); transition:color 0.2s; }
+  .mobile-nav-links a:hover { color:var(--green-deep); }
+  .mobile-nav .nav-cta { display:flex; align-items:center; justify-content:center; width:100%; margin-top:24px; }
+  @media (min-width:861px) { .mobile-nav, .mobile-nav-overlay { display:none; } }
+
+  /* HERO */
+  .hero { padding:150px 24px 100px; background:linear-gradient(180deg, #ffffff 0%, var(--bg) 60%); position:relative; overflow:hidden; }
+  @media (min-width:961px) { .hero { min-height:calc(100vh - 56px); display:flex; align-items:center; } }
+  .hero::before { content:''; position:absolute; top:-160px; left:-140px; width:480px; height:480px; border-radius:50%; background:radial-gradient(circle, rgba(85,184,180,0.28) 0%, transparent 70%); pointer-events:none; animation:heroBlobDrift1 15s ease-in-out infinite; }
+  .hero::after { content:''; position:absolute; bottom:-200px; right:-160px; width:560px; height:560px; border-radius:50%; background:radial-gradient(circle, rgba(85,184,180,0.18) 0%, transparent 70%); pointer-events:none; animation:heroBlobDrift2 18s ease-in-out infinite; }
+  @keyframes heroBlobDrift1 { 0%,100% { transform:translate(0,0); } 50% { transform:translate(35px,25px); } }
+  @keyframes heroBlobDrift2 { 0%,100% { transform:translate(0,0); } 50% { transform:translate(-30px,-20px); } }
+  .hero-grid { display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center; position:relative; }
+  @media (max-width:960px) { .hero-grid { grid-template-columns:1fr; gap:44px; } }
+  .hero-content { text-align:left; }
+  @media (max-width:960px) { .hero-content { text-align:center; } }
+  .review-badge { display:inline-flex; align-items:center; gap:10px; background:var(--ink); border:1px solid var(--ink); border-radius:100px; padding:9px 18px; margin-bottom:26px; box-shadow:var(--shadow-sm); }
+  .review-badge .stars { color:#f6c130; font-size:14px; letter-spacing:2px; }
+  .review-badge .review-label { font-size:13px; font-weight:600; color:var(--card); }
+  .hero h1 { font-size:clamp(32px,4.2vw,50px); font-weight:800; letter-spacing:-1.5px; margin-bottom:20px; }
+  .hero h1 .hl { color:var(--green-deep); }
+  .hero .lede { font-size:clamp(16px,2vw,18px); color:var(--ink-soft); max-width:560px; margin:0 0 36px; }
+  @media (max-width:960px) { .hero .lede { margin:0 auto 36px; } }
+  .hero-ctas { display:flex; flex-wrap:wrap; gap:12px; }
+  @media (max-width:960px) { .hero-ctas { justify-content:center; } }
+  .hero-features { display:flex; flex-wrap:wrap; gap:20px; margin-top:30px; }
+  @media (max-width:960px) { .hero-features { justify-content:center; } }
+  .hero-feature { display:flex; align-items:center; gap:8px; font-size:13.5px; font-weight:600; color:var(--ink-soft); }
+  .hero-feature svg { width:16px; height:16px; stroke:var(--green-deep); flex-shrink:0; }
+
+  /* TICKER */
+  .ticker { background:var(--green); overflow:hidden; padding:16px 0; position:relative; z-index:1; }
+  .ticker-track { display:flex; width:max-content; animation:tickerScroll 42s linear infinite; }
+  .ticker-item { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:15px; color:var(--card); white-space:nowrap; letter-spacing:0.2px; }
+  .ticker-item::after { content:'•'; margin:0 24px; opacity:0.6; }
+  @keyframes tickerScroll { from { transform:translateX(0); } to { transform:translateX(-25%); } }
+  .btn-primary { background:var(--green); color:var(--card); padding:16px 30px; border-radius:12px; font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:16px; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; border:2px solid var(--green); transition:all 0.2s; box-shadow:0 10px 26px -10px rgba(61,143,139,0.55); }
+  .btn-primary:hover { background:var(--green-deep); border-color:var(--green-deep); color:var(--card); transform:translateY(-1px); box-shadow:0 14px 30px -10px rgba(61,143,139,0.6); }
+  .btn-primary:active, .btn-secondary:active, .btn-dark:active, .nav-cta:active, .card-link:active { transform:scale(0.96); }
+  .btn-secondary { background:transparent; color:var(--ink); padding:16px 30px; border-radius:12px; font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:16px; text-decoration:none; border:2px solid var(--line); display:inline-flex; align-items:center; justify-content:center; transition:all 0.2s; }
+  .btn-secondary:hover { border-color:var(--green-deep); color:var(--green-deep); }
+  .btn-dark { background:var(--ink); color:var(--card); padding:16px 30px; border-radius:12px; font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:16px; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; border:2px solid var(--ink); transition:all 0.2s; }
+  .btn-dark:hover { background:transparent; color:var(--ink); }
+
+  /* HERO VISUAL */
+  .hero-visual { position:relative; padding:20px; perspective:1200px; }
+  .hero-visual-glow { position:absolute; inset:-50px; background:radial-gradient(circle, rgba(85,184,180,0.3) 0%, transparent 70%); pointer-events:none; z-index:0; }
+  .browser-card { position:relative; z-index:1; background:var(--card); border:1px solid var(--line); border-radius:18px; box-shadow:var(--shadow-lg); overflow:hidden; transition:transform 0.2s ease-out; will-change:transform; }
+  .browser-bar { background:#f0f2ec; padding:9px 12px; display:flex; align-items:center; gap:6px; border-bottom:1px solid var(--line); }
+  .browser-bar .dot { width:9px; height:9px; border-radius:50%; }
+  .browser-bar .dot.red { background:#fc5d5b; }
+  .browser-bar .dot.yellow { background:#ffc130; }
+  .browser-bar .dot.green { background:#34c84a; }
+  .browser-bar .url { flex:1; background:var(--card); border-radius:4px; padding:4px 10px; font-size:11px; color:var(--ink-soft); margin-left:6px; }
+  .browser-card-shot { position:relative; height:360px; overflow:hidden; }
+  .browser-card-shot img { position:absolute; inset:0; width:100%; height:100%; display:block; object-fit:cover; object-position:top; transform:scale(1.05); opacity:0; animation:heroCarousel 20s infinite; }
+  .browser-card-shot img:nth-child(1) { animation-delay:0s; }
+  .browser-card-shot img:nth-child(2) { animation-delay:4s; }
+  .browser-card-shot img:nth-child(3) { animation-delay:8s; }
+  .browser-card-shot img:nth-child(4) { animation-delay:12s; }
+  .browser-card-shot img:nth-child(5) { animation-delay:16s; }
+  @keyframes heroCarousel { 0% { opacity:0; } 3% { opacity:1; } 17% { opacity:1; } 20% { opacity:0; } 100% { opacity:0; } }
+  .carousel-dots { position:relative; z-index:2; margin-top:16px; display:flex; justify-content:center; gap:8px; }
+  .carousel-dot { width:7px; height:7px; border-radius:50%; background:rgba(85,184,180,0.3); animation:carouselDot 20s infinite; }
+  .carousel-dot:nth-child(1) { animation-delay:0s; }
+  .carousel-dot:nth-child(2) { animation-delay:4s; }
+  .carousel-dot:nth-child(3) { animation-delay:8s; }
+  .carousel-dot:nth-child(4) { animation-delay:12s; }
+  .carousel-dot:nth-child(5) { animation-delay:16s; }
+  @keyframes carouselDot { 0% { background:rgba(85,184,180,0.3); transform:scale(1); } 3% { background:var(--green-deep); transform:scale(1.35); } 17% { background:var(--green-deep); transform:scale(1.35); } 20% { background:rgba(85,184,180,0.3); transform:scale(1); } 100% { background:rgba(85,184,180,0.3); transform:scale(1); } }
+
+  /* SECTIONS */
+  .section { padding:88px 24px; }
+  .section-green { background:var(--green); }
+  .section-label { display:inline-flex; align-items:center; gap:8px; font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--green-ink); margin-bottom:12px; }
+  .section-label::before { content:''; width:7px; height:7px; background:var(--green); border-radius:2px; }
+  .section-label-light { color:var(--ink); opacity:0.75; }
+  .section-label-light::before { background:var(--ink); }
+  .section-head { max-width:640px; }
+  .section-head.center { max-width:680px; margin:0 auto; text-align:center; }
+  .section-title { font-size:clamp(26px,3.5vw,38px); font-weight:800; letter-spacing:-1px; margin-bottom:14px; }
+  .section-sub { font-size:16.5px; color:var(--ink-soft); line-height:1.65; }
+
+  /* SERVICES */
+  .services-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:22px; margin-top:48px; }
+  @media (max-width:760px) { .services-grid { grid-template-columns:1fr; } }
+  .service-card { position:relative; background:var(--card); border:1px solid var(--line); border-radius:var(--radius-lg); padding:30px 28px; transition:box-shadow 0.2s, transform 0.2s, border-color 0.2s; }
+  .service-card:hover { box-shadow:var(--shadow-md); transform:translateY(-3px); border-color:var(--green); background:var(--green-mist); }
+  .service-tag { display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:0.4px; text-transform:uppercase; color:var(--green-ink); background:var(--green-mist); padding:5px 12px; border-radius:100px; margin-bottom:14px; }
+  .service-card:hover .service-tag { background:var(--card); }
+  .service-card h3 { font-size:19px; font-weight:800; letter-spacing:-0.3px; margin-bottom:10px; }
+  .service-card p { font-size:14.5px; color:var(--ink-soft); line-height:1.65; margin-bottom:18px; }
+  .service-list { display:flex; flex-direction:column; gap:9px; margin-bottom:20px; }
+  .service-list li { position:relative; padding-left:20px; font-size:13.5px; color:var(--ink-soft); line-height:1.5; list-style:none; }
+  .service-list li::before { content:''; position:absolute; left:0; top:6px; width:8px; height:8px; border-radius:2px; background:var(--green); }
+  .card-link { display:inline-flex; align-items:center; gap:8px; font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:14px; color:var(--ink); text-decoration:none; background:none; border:none; padding:0; cursor:pointer; transition:color 0.2s, transform 0.15s; }
+  .card-link:hover { color:var(--green-deep); }
+  .card-link span:last-child { transition:transform 0.2s ease; }
+  .card-link:hover span:last-child { transform:translateX(4px); }
+
+  /* SERVICE MODAL */
+  .modal-overlay { position:fixed; inset:0; background:rgba(13,15,12,0.6); backdrop-filter:blur(4px); z-index:999; display:flex; align-items:center; justify-content:center; padding:24px; opacity:0; pointer-events:none; transition:opacity 0.25s; }
+  .modal-overlay.open { opacity:1; pointer-events:all; }
+  .modal { background:var(--card); border-radius:var(--radius-lg); padding:36px; width:100%; max-width:480px; position:relative; transform:translateY(16px); transition:transform 0.25s; box-shadow:var(--shadow-lg); max-height:90vh; overflow-y:auto; }
+  .modal-overlay.open .modal { transform:translateY(0); }
+  .modal-close { position:absolute; top:16px; right:16px; width:32px; height:32px; background:var(--bg-alt); border:none; border-radius:8px; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:18px; color:var(--ink-soft); transition:background 0.2s; line-height:1; }
+  .modal-close:hover { background:var(--line); }
+  .modal-service-tag { display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:0.4px; text-transform:uppercase; color:var(--green-ink); background:var(--green-mist); padding:5px 12px; border-radius:100px; margin-bottom:14px; }
+  .modal h3 { font-size:21px; font-weight:800; letter-spacing:-0.4px; margin-bottom:20px; }
+
+  /* CASE STUDIES */
+  .case-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:26px; margin-top:48px; }
+  .case-grid-centered-row { grid-column:1 / -1; display:flex; flex-wrap:wrap; justify-content:center; gap:26px; }
+  .case-grid-centered-row .case-card { flex:1 1 300px; max-width:380px; }
+  .case-card { position:relative; display:block; height:340px; overflow:hidden; border-radius:var(--radius-lg); border:1px solid var(--line); background:var(--card); box-shadow:var(--shadow-sm); transition:box-shadow 0.2s, transform 0.2s; text-decoration:none; }
+  .case-card:hover { box-shadow:var(--shadow-lg); transform:translateY(-5px); }
+  .case-card img { width:104%; max-width:104%; margin-left:-2%; display:block; transform:translateY(0); transition:transform var(--scroll-duration, 12s) cubic-bezier(0.25,0.46,0.45,0.94); will-change:transform; }
+  .case-card:hover img { transform:translateY(var(--scroll-distance)); }
+  .case-overlay { position:absolute; left:0; right:0; bottom:0; padding:20px; background:linear-gradient(0deg, rgba(13,15,12,0.82) 0%, rgba(13,15,12,0.35) 60%, transparent 100%); display:flex; align-items:center; justify-content:space-between; gap:12px; }
+  .case-card-pending { background:linear-gradient(135deg, var(--bg-alt), var(--green-mist)); }
+  .case-placeholder { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; color:var(--green-deep); opacity:0.6; }
+  .case-placeholder svg { width:36px; height:36px; }
+  .case-placeholder span { font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:13px; }
+  .case-name { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:17px; color:var(--card); letter-spacing:-0.2px; }
+  .case-category { flex-shrink:0; background:var(--green); color:var(--card); font-family:'Plus Jakarta Sans',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.4px; text-transform:uppercase; padding:5px 12px; border-radius:100px; box-shadow:0 4px 12px rgba(13,15,12,0.2); }
+
+  /* LOCAL TRUST */
+  .local { background:var(--bg-alt); }
+  .local-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; margin-top:20px; }
+  @media (max-width:860px) { .local-grid { grid-template-columns:1fr; } }
+  .suburb-list { display:flex; flex-wrap:wrap; gap:8px; margin-top:24px; }
+  .suburb-tag { font-size:13px; font-weight:600; color:var(--ink-soft); background:var(--card); border:1px solid var(--line); padding:8px 14px; border-radius:100px; transition:all 0.2s; cursor:default; }
+  .suburb-tag:hover { background:var(--green); border-color:var(--green); color:var(--card); transform:translateY(-2px); }
+  .why-card { background:var(--card); border:1px solid var(--line); border-radius:var(--radius-lg); padding:32px 30px; box-shadow:var(--shadow-sm); }
+  .why-card h3 { font-size:18px; font-weight:800; margin-bottom:18px; letter-spacing:-0.3px; }
+  .why-list { display:flex; flex-direction:column; gap:14px; }
+  .why-item { display:flex; gap:12px; align-items:flex-start; font-size:14.5px; color:var(--ink-soft); line-height:1.6; }
+  .why-item svg { width:18px; height:18px; stroke:var(--green-deep); flex-shrink:0; margin-top:2px; }
+  .local-map { grid-column:1 / -1; margin-top:20px; border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow-sm); }
+  .local-map iframe { width:100%; height:340px; border:0; display:block; }
+
+  /* PROCESS */
+  .process-list { display:grid; grid-template-columns:repeat(4,1fr); gap:22px; margin-top:48px; }
+  @media (max-width:960px) { .process-list { grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:560px) { .process-list { grid-template-columns:1fr; } }
+  .process-item { background:var(--card); border:1px solid var(--line); border-radius:var(--radius-lg); padding:28px 24px; transition:background 0.2s, border-color 0.2s, transform 0.35s cubic-bezier(0.34,1.56,0.64,1); }
+  .process-item:hover { background:var(--green-mist); border-color:var(--green); transform:translateY(-6px); }
+  .process-num { width:42px; height:42px; border-radius:12px; background:var(--green); color:var(--card); font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; font-size:16px; display:flex; align-items:center; justify-content:center; margin-bottom:16px; transition:transform 0.35s cubic-bezier(0.34,1.56,0.64,1); }
+  .process-item:hover .process-num { transform:scale(1.12) rotate(-6deg); }
+  .process-item h3 { font-size:17px; font-weight:700; margin-bottom:8px; letter-spacing:-0.2px; }
+  .process-item p { font-size:14px; color:var(--ink-soft); line-height:1.6; }
+
+  /* PROOF / TESTIMONIAL */
+  .proof { text-align:center; max-width:820px; margin:0 auto; }
+  .proof blockquote { font-family:'Plus Jakarta Sans',sans-serif; font-size:clamp(20px,2.6vw,28px); font-weight:700; letter-spacing:-0.5px; line-height:1.4; color:var(--card); }
+  .proof cite { display:block; margin-top:18px; font-style:normal; font-size:14px; color:rgba(255,255,255,0.75); }
+  .proof-stats { display:flex; justify-content:center; gap:40px; flex-wrap:wrap; margin-top:40px; }
+  .proof-stat b { display:block; font-family:'Plus Jakarta Sans',sans-serif; font-size:30px; font-weight:800; color:var(--card); letter-spacing:-1px; }
+  .proof-stat span { font-size:13px; color:rgba(255,255,255,0.75); font-weight:600; }
+
+  /* FAQ */
+  .faq-list { max-width:900px; margin:48px auto 0; display:flex; gap:20px; text-align:left; }
+  .faq-col { flex:1; display:flex; flex-direction:column; gap:14px; min-width:0; }
+  @media (max-width:760px) { .faq-list { flex-direction:column; } }
+  .faq-item { background:var(--card); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; transition:border-color 0.2s; }
+  .faq-item.open { border-color:var(--green); }
+  .faq-q { padding:18px 20px; font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:15px; color:var(--ink); cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:16px; user-select:none; }
+  .faq-q:hover { color:var(--green-deep); }
+  .faq-chevron { width:18px; height:18px; flex-shrink:0; stroke:currentColor; transition:transform 0.25s; }
+  .faq-item.open .faq-chevron { transform:rotate(180deg); }
+  .faq-a { max-height:0; overflow:hidden; transition:max-height 0.3s ease; }
+  .faq-a-inner { padding:0 20px 18px; font-size:14.5px; color:var(--ink-soft); line-height:1.7; }
+  .faq-item.open .faq-a { max-height:320px; }
+
+  /* FINAL CTA */
+  .final-cta { background:var(--bg-alt); }
+  .cta-grid { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; }
+  @media (max-width:860px) { .cta-grid { grid-template-columns:1fr; gap:40px; text-align:center; } }
+  .cta-info .section-sub { margin-top:14px; }
+  .cta-benefits { display:flex; flex-direction:column; gap:12px; margin:28px 0; }
+  @media (max-width:860px) { .cta-benefits { align-items:center; } }
+  .cta-benefit { display:flex; align-items:center; gap:10px; font-size:14.5px; font-weight:600; color:var(--ink); }
+  .cta-benefit svg { width:18px; height:18px; stroke:var(--green-deep); flex-shrink:0; }
+
+  /* ENQUIRY FORM */
+  .enquiry-form { max-width:560px; margin:0; text-align:left; display:flex; flex-direction:column; gap:16px; background:var(--card); border:1px solid var(--line); border-radius:var(--radius-lg); padding:32px; box-shadow:var(--shadow-md); }
+  @media (max-width:860px) { .enquiry-form { margin:0 auto; } }
+  .form-row-2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  @media (max-width:480px) { .form-row-2 { grid-template-columns:1fr; } }
+  .fg { display:flex; flex-direction:column; gap:6px; }
+  .fg label { font-size:13px; font-weight:700; color:var(--ink); }
+  .fg input, .fg textarea {
+    padding:12px 14px; border:1.5px solid var(--line); border-radius:10px;
+    font-family:'DM Sans',sans-serif; font-size:15px; color:var(--ink);
+    background:var(--bg); outline:none; width:100%; transition:border-color 0.2s; resize:vertical;
+  }
+  .fg input:focus, .fg textarea:focus { border-color:var(--green); }
+  .form-submit-btn { border:2px solid var(--green); cursor:pointer; margin-top:4px; }
+  .form-submit-btn.loading { opacity:0.7; pointer-events:none; }
+  .form-error { display:none; font-size:13.5px; color:#c0392b; text-align:center; margin-top:-4px; }
+  .form-error.visible { display:block; }
+  .form-error a { color:#c0392b; text-decoration:underline; }
+  .contact-alt { text-align:left; margin-top:0; font-size:14.5px; color:var(--ink-soft); }
+  @media (max-width:860px) { .contact-alt { text-align:center; } }
+  .contact-alt a { color:var(--green-ink); font-weight:700; text-decoration:none; }
+  .contact-alt a:hover { color:var(--green-deep); }
+
+  /* FOOTER */
+  .footer-bg { background:var(--bg-alt); display:flow-root; }
+  footer { background:var(--ink); margin:20px; border-radius:28px; padding:60px 40px 0; overflow:hidden; }
+  @media (max-width:640px) { footer { margin:12px; padding:44px 22px 0; } }
+  .footer-inner { max-width:1240px; margin:0 auto; }
+  .footer-top { display:flex; flex-wrap:wrap; justify-content:space-between; gap:36px; padding-bottom:48px; border-bottom:1px solid rgba(255,255,255,0.1); }
+  .footer-brand { flex:1 1 260px; max-width:300px; }
+  .footer-logo { height:28px; width:auto; margin-bottom:16px; filter:brightness(0) invert(1); }
+  .footer-brand p { font-size:14px; color:rgba(255,255,255,0.55); line-height:1.7; }
+  .footer-socials { display:flex; gap:10px; margin-top:16px; }
+  .footer-social-icon { width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; transition:background 0.2s, border-color 0.2s; text-decoration:none; }
+  .footer-social-icon svg { width:16px; height:16px; fill:rgba(255,255,255,0.7); }
+  .footer-social-icon:hover { background:var(--green); border-color:var(--green); }
+  .footer-social-icon:hover svg { fill:var(--ink); }
+  .footer-cols { display:flex; gap:56px; flex-wrap:wrap; }
+  .footer-col { display:flex; flex-direction:column; gap:12px; }
+  .footer-col h4 { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:13.5px; color:var(--card); margin-bottom:4px; letter-spacing:0.3px; }
+  .footer-col a, .footer-col p { font-size:14px; color:rgba(255,255,255,0.55); text-decoration:none; transition:color 0.2s; }
+  .footer-col a:hover { color:var(--green); }
+  .footer-bottom { display:flex; flex-wrap:wrap; gap:12px 24px; align-items:center; justify-content:space-between; padding:24px 0; }
+  .footer-bottom span { font-size:13px; color:rgba(255,255,255,0.35); }
+  .footer-legal-group { display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+  .footer-legal-link { font-size:13px; color:rgba(255,255,255,0.5); text-decoration:none; transition:color 0.2s; }
+  .footer-legal-link:hover { color:var(--green); }
+  .footer-quote-btn { background:var(--green); color:var(--card) !important; padding:11px 22px; border-radius:10px; font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:14px !important; text-decoration:none; white-space:nowrap; transition:filter 0.2s, transform 0.2s; box-shadow:0 6px 18px -8px rgba(61,143,139,0.55); display:inline-flex; align-items:center; justify-content:center; margin-top:8px; width:fit-content; }
+  .footer-quote-btn:hover { filter:brightness(0.95); color:var(--card) !important; transform:translateY(-1px); }
+  .footer-quote-btn:active { transform:scale(0.96); }
+
+  /* FADE ANIM */
+  .fade-up { opacity:0; transform:translateY(20px); transition:opacity 0.6s ease, transform 0.6s ease; }
+  .fade-up.visible { opacity:1; transform:translateY(0); }
+  .services-grid > .fade-up:nth-child(1), .process-list > .fade-up:nth-child(1), .case-grid > .fade-up:nth-child(1), .case-grid-centered-row > .fade-up:nth-child(1) { transition-delay:0.05s; }
+  .services-grid > .fade-up:nth-child(2), .process-list > .fade-up:nth-child(2), .case-grid > .fade-up:nth-child(2), .case-grid-centered-row > .fade-up:nth-child(2) { transition-delay:0.15s; }
+  .services-grid > .fade-up:nth-child(3), .process-list > .fade-up:nth-child(3), .case-grid > .fade-up:nth-child(3) { transition-delay:0.25s; }
+  .services-grid > .fade-up:nth-child(4), .process-list > .fade-up:nth-child(4) { transition-delay:0.35s; }
+
+  @media (max-width:640px) {
+    .hero { padding:130px 20px 80px; }
+    .section { padding:60px 20px; }
+    .btn-primary, .btn-secondary, .btn-dark { width:100%; max-width:320px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="nav-logo" href="#">
+      <img class="brand-logo" src="prospr-logo-trimmed.png" alt="prospr">
+    </a>
+    <nav class="nav-links">
+      <a href="#services">How We Can Help</a>
+      <a href="#local">About prospr</a>
+      <a href="#process">Our Process</a>
+      <a href="#work">Local Results</a>
+      <a href="#faq">FAQs</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Get a Free Quote</a>
+    <button type="button" class="nav-burger" id="nav-burger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+<div class="mobile-nav" id="mobile-nav">
+  <div class="mobile-nav-top">
+    <a class="nav-logo" href="#">
+      <img class="brand-logo" src="prospr-logo-trimmed.png" alt="prospr" style="height:24px;">
+    </a>
+    <button type="button" class="mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">&times;</button>
+  </div>
+  <nav class="mobile-nav-links">
+    <a href="#services">How We Can Help</a>
+    <a href="#local">About prospr</a>
+    <a href="#process">Our Process</a>
+    <a href="#work">Local Results</a>
+    <a href="#faq">FAQs</a>
+  </nav>
+  <a class="nav-cta" href="#contact">Get a Free Quote</a>
+</div>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-content fade-up">
+        <div class="review-badge">
+          <span class="stars">★★★★★</span>
+          <span class="review-label">5.0 star ratings from local businesses</span>
+        </div>
+        <h1>We help Wollongong businesses <span class="hl">prospr.</span></h1>
+        <p class="lede">We turn your website into a lead-generating machine — enquiries, ad spend, and local SEO, all handled. Consider us your complete growth team, right here in Wollongong.</p>
+        <div class="hero-ctas">
+          <a class="btn-primary" href="#contact">Get a Free Quote</a>
+          <a class="btn-secondary" href="#work">See Local Results</a>
+        </div>
+        <div class="hero-features">
+          <div class="hero-feature"><svg fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No long-term contracts</div>
+          <div class="hero-feature"><svg fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Wollongong-based team</div>
+          <div class="hero-feature"><svg fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Live in days, not months</div>
+        </div>
+      </div>
+      <div class="hero-visual fade-up">
+        <div class="hero-visual-glow"></div>
+        <div class="browser-card">
+          <div class="browser-card-shot">
+            <img src="case-poppy-sea.jpg" alt="Poppy &amp; Sea website built by prospr">
+            <img src="case-oz-energy.jpg" alt="Oz Energy Solutions website built by prospr">
+            <img src="case-para-wollongong.jpg" alt="PARA Coworking website built by prospr">
+            <img src="case-sentrion.jpg" alt="Sentrion Tech website built by prospr">
+            <img src="case-copperline.jpg" alt="Copperline Plumbing Co website built by prospr">
+          </div>
+        </div>
+        <div class="carousel-dots">
+          <span class="carousel-dot"></span>
+          <span class="carousel-dot"></span>
+          <span class="carousel-dot"></span>
+          <span class="carousel-dot"></span>
+          <span class="carousel-dot"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker">
+    <div class="ticker-track">
+      <span class="ticker-item">Web Design</span>
+      <span class="ticker-item">Local SEO</span>
+      <span class="ticker-item">Branding &amp; Identity</span>
+      <span class="ticker-item">Google &amp; Meta Ads</span>
+      <span class="ticker-item">Wollongong &amp; Illawarra</span>
+      <span class="ticker-item">Web Design</span>
+      <span class="ticker-item">Local SEO</span>
+      <span class="ticker-item">Branding &amp; Identity</span>
+      <span class="ticker-item">Google &amp; Meta Ads</span>
+      <span class="ticker-item">Wollongong &amp; Illawarra</span>
+      <span class="ticker-item">Web Design</span>
+      <span class="ticker-item">Local SEO</span>
+      <span class="ticker-item">Branding &amp; Identity</span>
+      <span class="ticker-item">Google &amp; Meta Ads</span>
+      <span class="ticker-item">Wollongong &amp; Illawarra</span>
+      <span class="ticker-item">Web Design</span>
+      <span class="ticker-item">Local SEO</span>
+      <span class="ticker-item">Branding &amp; Identity</span>
+      <span class="ticker-item">Google &amp; Meta Ads</span>
+      <span class="ticker-item">Wollongong &amp; Illawarra</span>
+    </div>
+  </div>
+
+  <section id="services" class="section">
+    <div class="wrap">
+      <div class="section-head center fade-up">
+        <span class="section-label">How can we help</span>
+        <h2 class="section-title">What's holding your business back?</h2>
+        <p class="section-sub">Most Illawarra business owners know their digital presence is costing them money. If any of these sound familiar, it's time for a change.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-up">
+          <span class="service-tag">Web Design &amp; Maintenance</span>
+          <h3>I need my website to work harder</h3>
+          <p>Is your current site slow, outdated, or embarrassing to send clients to? We rebuild it with ultra-fast loading, sharp copy and a modern layout that drives real results.</p>
+          <ul class="service-list">
+            <li>Custom design, built around your brand</li>
+            <li>Mobile-first, fast-loading pages</li>
+            <li>Hosting, security &amp; ongoing care plan</li>
+          </ul>
+          <button type="button" class="card-link" data-service="Web Design &amp; Maintenance"><span>Improve My Website</span><span>→</span></button>
+        </div>
+        <div class="service-card fade-up">
+          <span class="service-tag">Google &amp; Meta Ads</span>
+          <h3>I need more leads &amp; enquiries</h3>
+          <p>Capture active searchers on Google and ready buyers scrolling social media. We run targeted campaigns across both platforms to generate a predictable stream of qualified leads every week.</p>
+          <ul class="service-list">
+            <li>Google &amp; Meta campaign setup and management</li>
+            <li>Landing pages built to convert clicks</li>
+            <li>Monthly reporting, plain English</li>
+          </ul>
+          <button type="button" class="card-link" data-service="Google &amp; Meta Ads"><span>Get More Leads</span><span>→</span></button>
+        </div>
+        <div class="service-card fade-up">
+          <span class="service-tag">Local Wollongong SEO</span>
+          <h3>I need to rank #1 on Google</h3>
+          <p>Invisible on local search maps? We optimise your Google presence so when Illawarra locals search for your services, your business is the first one they see and trust.</p>
+          <ul class="service-list">
+            <li>Google Business Profile optimisation</li>
+            <li>Local keyword &amp; map pack targeting</li>
+            <li>Review generation strategy</li>
+          </ul>
+          <button type="button" class="card-link" data-service="Local Wollongong SEO"><span>Boost My Rankings</span><span>→</span></button>
+        </div>
+        <div class="service-card fade-up">
+          <span class="service-tag">Branding &amp; Identity</span>
+          <h3>I need a brand people remember</h3>
+          <p>Blending in on the escarpment or along the coast? We build logos, colours and messaging that make your business the obvious, memorable choice.</p>
+          <ul class="service-list">
+            <li>Logo, colour palette &amp; brand guidelines</li>
+            <li>Messaging that sounds like you</li>
+            <li>Consistent look across print &amp; digital</li>
+          </ul>
+          <button type="button" class="card-link" data-service="Branding &amp; Identity"><span>Sharpen My Brand</span><span>→</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="section" style="background:var(--bg-alt);">
+    <div class="wrap">
+      <div class="section-head center fade-up">
+        <span class="section-label">Work we're proud of</span>
+        <h2 class="section-title">Illawarra businesses we've helped prospr.</h2>
+        <p class="section-sub">A look at a few of the sites we've designed and built for local businesses — hover a preview to scroll through the page.</p>
+      </div>
+      <div class="case-grid">
+        <a class="case-card fade-up" href="#contact" style="--scroll-distance:-82%;">
+          <img src="case-poppy-sea.jpg" alt="Poppy &amp; Sea website built by prospr">
+          <span class="case-overlay">
+            <span class="case-name">Poppy &amp; Sea</span>
+            <span class="case-category">Florist</span>
+          </span>
+        </a>
+
+        <a class="case-card fade-up" href="#contact" style="--scroll-distance:-80%;">
+          <img src="case-oz-energy.jpg" alt="Oz Energy Solutions website built by prospr">
+          <span class="case-overlay">
+            <span class="case-name">Oz Energy Solutions</span>
+            <span class="case-category">Trades</span>
+          </span>
+        </a>
+
+        <a class="case-card fade-up" href="#contact" style="--scroll-distance:-84%;">
+          <img src="case-para-wollongong.jpg" alt="PARA Coworking website built by prospr">
+          <span class="case-overlay">
+            <span class="case-name">PARA Coworking</span>
+            <span class="case-category">Coworking</span>
+          </span>
+        </a>
+
+        <div class="case-grid-centered-row">
+          <a class="case-card fade-up" href="#contact" style="--scroll-distance:-88%; --scroll-duration:22s;">
+            <img src="case-sentrion.jpg" alt="Sentrion Tech website built by prospr">
+            <span class="case-overlay">
+              <span class="case-name">Sentrion Tech</span>
+              <span class="case-category">IT Support</span>
+            </span>
+          </a>
+
+          <a class="case-card fade-up" href="#contact" style="--scroll-distance:-86%; --scroll-duration:19s;">
+            <img src="case-copperline.jpg" alt="Copperline Plumbing Co website built by prospr">
+            <span class="case-overlay">
+              <span class="case-name">Copperline Plumbing Co</span>
+              <span class="case-category">Trades</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="local" class="section local">
+    <div class="wrap local-grid">
+      <div class="fade-up">
+        <span class="section-label">Home turf</span>
+        <h2 class="section-title">We know the Illawarra market because we live in it</h2>
+        <p class="section-sub">prospr is based in Wollongong. We understand the seasonal rush at Kiama, the tradie network around Dapto and Albion Park, and what it takes to stand out in a region where word of mouth still travels fast — online and off.</p>
+        <div class="suburb-list">
+          <span class="suburb-tag">Wollongong</span>
+          <span class="suburb-tag">Thirroul</span>
+          <span class="suburb-tag">Corrimal</span>
+          <span class="suburb-tag">Fairy Meadow</span>
+          <span class="suburb-tag">Dapto</span>
+          <span class="suburb-tag">Shellharbour</span>
+          <span class="suburb-tag">Albion Park</span>
+          <span class="suburb-tag">Kiama</span>
+          <span class="suburb-tag">Port Kembla</span>
+        </div>
+      </div>
+      <div class="why-card fade-up">
+        <h3>Why local businesses choose prospr</h3>
+        <div class="why-list">
+          <div class="why-item"><svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>A team you can meet face-to-face, not a call centre overseas.</div>
+          <div class="why-item"><svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Websites built for how Illawarra customers actually search and browse.</div>
+          <div class="why-item"><svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Straight-talking reporting — you'll always know what's working.</div>
+          <div class="why-item"><svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Pricing that makes sense for a growing local business, not a national chain.</div>
+        </div>
+      </div>
+      <div class="local-map fade-up">
+        <iframe src="https://www.google.com/maps?q=Illawarra+Region,+NSW&output=embed" title="Map of the Illawarra region, NSW" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="section">
+    <div class="wrap">
+      <div class="section-head center fade-up">
+        <span class="section-label">How we work</span>
+        <h2 class="section-title">From first chat to live and growing</h2>
+        <p class="section-sub">A simple, four-step process so you always know where your project stands.</p>
+      </div>
+      <div class="process-list">
+        <div class="process-item fade-up">
+          <div class="process-num">01</div>
+          <h3>Discover</h3>
+          <p>We learn your business, your customers and what's actually holding your growth back, so every recommendation is built around you, not a template.</p>
+        </div>
+        <div class="process-item fade-up">
+          <div class="process-num">02</div>
+          <h3>Design</h3>
+          <p>A clear plan and design direction built around your brand, mapped to what Illawarra customers respond to.</p>
+        </div>
+        <div class="process-item fade-up">
+          <div class="process-num">03</div>
+          <h3>Build</h3>
+          <p>Your site or campaign gets built, tested and optimised for speed, mobile and search — before anything goes live.</p>
+        </div>
+        <div class="process-item fade-up">
+          <div class="process-num">04</div>
+          <h3>Grow</h3>
+          <p>We keep measuring, refining and reporting so your digital presence keeps paying off long after launch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-green">
+    <div class="wrap proof fade-up">
+      <blockquote>"They've been running our SEO and the results have been awesome. Plus we've been working on a brand new website with them and we can't wait to see it go live! Super easy to work with, super helpful and they genuinely care about helping your business grow."</blockquote>
+      <cite>— Local tradie</cite>
+      <div class="proof-stats">
+        <div class="proof-stat"><b>5/mo</b><span>New enquiries</span></div>
+        <div class="proof-stat"><b>&lt;1.5s</b><span>Average load time</span></div>
+        <div class="proof-stat"><b>2×</b><span>Reviews collected</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section">
+    <div class="wrap">
+      <div class="section-head center fade-up">
+        <span class="section-label" style="justify-content:center;">Good questions</span>
+        <h2 class="section-title">Frequently asked questions.</h2>
+        <p class="section-sub" style="margin:0 auto;">Everything we get asked before a Wollongong business signs on with prospr.</p>
+      </div>
+      <div class="faq-list fade-up">
+        <div class="faq-col">
+          <div class="faq-item">
+            <div class="faq-q"><span>What is Google Business Profile optimisation?</span><svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+            <div class="faq-a"><div class="faq-a-inner">Your Google Business Profile (formerly Google My Business) is the listing that shows up in Google Maps. Optimisation involves updating your categories, service areas, photos, keywords, and review strategies so that Google positions your business in the "Local 3-Pack" — the top three map results people see first.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><span>Why shouldn't I just run my own Facebook or Google ads?</span><svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+            <div class="faq-a"><div class="faq-a-inner">You absolutely can, but managing ad platforms efficiently requires constant tracking and technical optimisation. Without proper setup, it's incredibly easy to waste hundreds of dollars on broad keywords or incorrect geographic targeting. We save you time and make sure every dollar of your ad spend works as hard as possible.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><span>Should I choose Google Ads or Meta (Facebook/Instagram) Ads?</span><svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+            <div class="faq-a"><div class="faq-a-inner">It depends entirely on your industry and target market. Google Ads are ideal for "high-intent" searches (e.g., someone typing "emergency plumber near me"). Meta Ads are excellent for visual businesses or offer-driven services. We'll review your business and give you a clear recommendation.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><span>Can we meet face to face?</span><svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+            <div class="faq-a"><div class="faq-a-inner">Genuinely, yes. If you're located in Wollongong, Shellharbour, or across the broader Illawarra, you don't have to settle for endless video calls. We're happy to sit down over a coffee or meet you at your office to talk through your strategy.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><span>What if I've been burnt by an agency before?</span><svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+            <div class="faq-a"><div class="faq-a-inner">You own everything from day one — full access to your files, your domain, and your data. We don't hold anything hostage. If you ever decide to leave, everything comes with you, no arguments.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><span>I'm not a "tech person." How complicated is this for me?</span><svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+            <div class="faq-a"><div class="faq-a-inner">We built prospr explicitly for busy business owners who hate messing with tech. We handle all the setup, coding, tracking, and troubleshooting. You just answer the phone and look at your simplified monthly report.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><span>Do you only work with businesses in Wollongong?</span><svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+            <div class="faq-a"><div class="faq-a-inner">Wollongong and the surrounding Illawarra is our core focus and where most of our clients are based, but we do work with businesses further afield where it makes sense.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><span>Are there any hidden fees or setup costs?</span><svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+            <div class="faq-a"><div class="faq-a-inner">Transparency is one of our core values — there are no hidden fees. Everything is quoted upfront, so what you agree to is what you pay.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><span>How long does a new website take?</span><svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+            <div class="faq-a"><div class="faq-a-inner">Most sites are live within a week of us receiving your content. We provide a simple content checklist upfront so there are no delays on our end.</div></div>
+          </div>
+        </div>
+        <div class="faq-col">
+          <div class="faq-item">
+            <div class="faq-q"><span>Why do you focus so heavily on website speed and mobile optimisation?</span><svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+            <div class="faq-a"><div class="faq-a-inner">The vast majority of local searches happen on smartphones, often by customers who want something sorted fast. If your website takes more than a couple of seconds to load, or looks clunky on a mobile screen, prospects will tap out and call your competitor. We engineer every site from the ground up to load instantly and function flawlessly on mobile devices.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><span>What does "plus ad spend" mean?</span><svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+            <div class="faq-a"><div class="faq-a-inner">We'll give you a quote for our management fee — the work we do to build, monitor, and optimise your ad campaigns. Your "ad spend" is the actual budget that goes directly to Google or Meta to display your ads. You pay this budget directly to the ad platforms, and we help you determine a budget that fits your goals.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><span>How long does it take to see results from Local SEO?</span><svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+            <div class="faq-a"><div class="faq-a-inner">Paid ads can start generating leads within days of launching. Organic Local SEO is a long-term asset; it typically takes 3 to 6 months of consistent optimisation to see sustainable moves in search rankings. However, these organic leads cost you nothing once you rank.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><span>Do you force me to move my website hosting to you?</span><svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+            <div class="faq-a"><div class="faq-a-inner">Not at all. If you already have a reliable, fast hosting provider you're happy with, we can build or optimise your website right where it is. We offer secure, high-speed hosting as a convenience to keep everything under one roof, but where your digital assets live is entirely up to you.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><span>What's the minimum commitment?</span><svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+            <div class="faq-a"><div class="faq-a-inner">A website build is a one-time project. Care plans, ads, and SEO are all month-to-month, with no lock-in contracts. We'd rather earn your business every month than trap you into staying.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><span>What if I already have a website?</span><svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+            <div class="faq-a"><div class="faq-a-inner">We'll audit it first — speed, mobile experience, and where it's likely losing enquiries. If it's salvageable, we'll tell you honestly. If it's actively costing you jobs, we'll show you exactly why, with data rather than opinion.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><span>How much does a new website cost?</span><svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+            <div class="faq-a"><div class="faq-a-inner">It depends on the scope of the project. Rather than guess, we'd rather have a quick conversation about what you actually need and give you a clear, itemised quote with no hidden extras.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><span>Can you help if I'm not sure what I actually need?</span><svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+            <div class="faq-a"><div class="faq-a-inner">Yes — a quick, free digital health check is usually the fastest way to work out whether the issue is your website, your visibility, or something else entirely.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><span>What's included in a care plan?</span><svg class="faq-chevron" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></div>
+            <div class="faq-a"><div class="faq-a-inner">Hosting, security monitoring, plugin and theme updates, and regular backups. Your site stays fast, safe, and online without you having to think about it.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section final-cta">
+    <div class="wrap cta-grid">
+      <div class="cta-info fade-up">
+        <span class="section-label">Let's talk</span>
+        <h2 class="section-title">Ready to help your business prospr?</h2>
+        <p class="section-sub">We're looking forward to hearing about your business — tell us what's going on and we'll show you exactly how we can help and what to fix first.</p>
+        <div class="cta-benefits">
+          <div class="cta-benefit"><svg fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No-obligation, 15-minute chat</div>
+          <div class="cta-benefit"><svg fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Straight answers, no sales pitch</div>
+          <div class="cta-benefit"><svg fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>We reply within one business day</div>
+        </div>
+      </div>
+      <form class="enquiry-form fade-up" id="enquiry-form" action="https://formspree.io/f/mbgrqpda" method="POST">
+        <div class="form-row-2">
+          <div class="fg">
+            <label for="enq-name">Name</label>
+            <input id="enq-name" name="Name" type="text" placeholder="Your name" required>
+          </div>
+          <div class="fg">
+            <label for="enq-phone">Phone</label>
+            <input id="enq-phone" name="Phone" type="tel" placeholder="04XX XXX XXX">
+          </div>
+        </div>
+        <div class="fg">
+          <label for="enq-email">Email</label>
+          <input id="enq-email" name="Email" type="email" placeholder="you@business.com.au" required>
+        </div>
+        <div class="fg">
+          <label for="enq-website">Current website (if you have one)</label>
+          <input id="enq-website" name="Website" type="text" placeholder="yourbusiness.com.au">
+        </div>
+        <div class="fg">
+          <label for="enq-message">What do you need help with?</label>
+          <textarea id="enq-message" name="Message" rows="4" placeholder="Tell us a bit about your business and what's not working online" required></textarea>
+        </div>
+        <input type="hidden" name="_subject" value="Website enquiry from prospr.studio">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="_next" value="thank-you.html">
+        <button type="submit" class="btn-primary form-submit-btn">Submit</button>
+        <p class="form-error" id="enquiry-form-error">Something went wrong sending your message — please try again, or email <a href="mailto:hello@prospr.studio">hello@prospr.studio</a> directly.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<div class="footer-bg">
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img class="brand-logo footer-logo" src="prospr-logo-trimmed.png" alt="prospr">
+        <p>Wollongong &amp; Illawarra's local digital growth team — web design, SEO, branding and ads, handled.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/profile.php?id=61593570118918" class="footer-social-icon" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>How we can help</h4>
+          <a href="#services">Web Design + Maintenance</a>
+          <a href="#services">Local SEO</a>
+          <a href="#services">Branding</a>
+          <a href="#services">Google + Meta Ads</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#local">About prospr</a>
+          <a href="#process">Our Process</a>
+          <a href="#work">Local Results</a>
+          <a href="#faq">FAQs</a>
+        </div>
+        <div class="footer-col">
+          <h4>Get in touch</h4>
+          <p>Wollongong, NSW</p>
+          <a href="mailto:hello@prospr.studio">hello@prospr.studio</a>
+          <a class="footer-quote-btn" href="#contact">Get a Free Quote</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-legal-group">
+        <span>© 2026 prospr. All rights reserved.</span>
+        <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+      </div>
+      <span>Helping Illawarra businesses prospr.</span>
+    </div>
+  </div>
+</footer>
+</div>
+
+<div class="modal-overlay" id="service-modal-overlay">
+  <div class="modal">
+    <button type="button" class="modal-close" id="service-modal-close">&times;</button>
+    <span class="modal-service-tag" id="service-modal-tag">Web Design</span>
+    <h3>Let's talk about it.</h3>
+    <form class="enquiry-form" id="service-modal-form" action="https://formspree.io/f/mbgrqpda" method="POST" style="padding:0;border:none;box-shadow:none;margin:0;">
+      <input type="hidden" id="svc-service-field" name="Service interested in" value="">
+      <div class="fg">
+        <label for="svc-name">Name</label>
+        <input id="svc-name" name="Name" type="text" placeholder="Your name" required>
+      </div>
+      <div class="fg">
+        <label for="svc-phone">Phone</label>
+        <input id="svc-phone" name="Phone" type="tel" placeholder="04XX XXX XXX">
+      </div>
+      <div class="fg">
+        <label for="svc-email">Email</label>
+        <input id="svc-email" name="Email" type="email" placeholder="you@business.com.au" required>
+      </div>
+      <div class="fg">
+        <label for="svc-website">Current website (if you have one)</label>
+        <input id="svc-website" name="Website" type="text" placeholder="yourbusiness.com.au">
+      </div>
+      <div class="fg">
+        <label for="svc-message">What do you need help with?</label>
+        <textarea id="svc-message" name="Message" rows="3" placeholder="Tell us a bit about your business and what's not working online" required></textarea>
+      </div>
+      <input type="hidden" name="_subject" value="Website enquiry from prospr.studio">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="_next" value="thank-you.html">
+      <button type="submit" class="btn-primary form-submit-btn">Get In Touch</button>
+      <p class="form-error" id="service-modal-form-error">Something went wrong sending your message — please try again, or email <a href="mailto:hello@prospr.studio">hello@prospr.studio</a> directly.</p>
+    </form>
+  </div>
+</div>
+
+<script>
+(function () {
+  var burger = document.getElementById('nav-burger');
+  var closeBtn = document.getElementById('mobile-nav-close');
+  var drawer = document.getElementById('mobile-nav');
+  var overlay = document.getElementById('mobile-nav-overlay');
+  if (!burger || !drawer || !overlay) return;
+
+  function openDrawer() {
+    drawer.classList.add('open');
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  burger.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+  drawer.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeDrawer); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeDrawer(); });
+})();
+
+(function () {
+  var header = document.querySelector('header');
+  var els = document.querySelectorAll('.fade-up');
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.15 });
+  els.forEach(function (el) { io.observe(el); });
+})();
+
+(function () {
+  var visual = document.querySelector('.hero-visual');
+  var card = document.querySelector('.browser-card');
+  if (!visual || !card || window.matchMedia('(hover: none)').matches) return;
+  visual.addEventListener('mousemove', function (e) {
+    var rect = visual.getBoundingClientRect();
+    var x = (e.clientX - rect.left) / rect.width - 0.5;
+    var y = (e.clientY - rect.top) / rect.height - 0.5;
+    card.style.transform = 'rotateY(' + (x * 8) + 'deg) rotateX(' + (y * -8) + 'deg)';
+  });
+  visual.addEventListener('mouseleave', function () {
+    card.style.transform = '';
+  });
+})();
+
+(function () {
+  var form = document.getElementById('enquiry-form');
+  if (!form) return;
+  var errorEl = document.getElementById('enquiry-form-error');
+  var submitBtn = form.querySelector('.form-submit-btn');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    errorEl.classList.remove('visible');
+    submitBtn.classList.add('loading');
+    submitBtn.textContent = 'Sending…';
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { Accept: 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        window.location.href = 'thank-you.html';
+      } else {
+        throw new Error('Submission failed');
+      }
+    }).catch(function () {
+      submitBtn.classList.remove('loading');
+      submitBtn.textContent = 'Submit';
+      errorEl.classList.add('visible');
+    });
+  });
+})();
+
+(function () {
+  var items = document.querySelectorAll('.faq-item');
+  items.forEach(function (item) {
+    item.querySelector('.faq-q').addEventListener('click', function () {
+      item.classList.toggle('open');
+    });
+  });
+})();
+
+(function () {
+  var overlay = document.getElementById('service-modal-overlay');
+  var tag = document.getElementById('service-modal-tag');
+  var closeBtn = document.getElementById('service-modal-close');
+  var form = document.getElementById('service-modal-form');
+  var triggers = document.querySelectorAll('[data-service]');
+  if (!overlay || !triggers.length) return;
+
+  var serviceField = document.getElementById('svc-service-field');
+  function openModal(service) {
+    tag.textContent = service;
+    form.dataset.service = service;
+    serviceField.value = service;
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  triggers.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      openModal(btn.getAttribute('data-service'));
+    });
+  });
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) closeModal();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  var errorEl = document.getElementById('service-modal-form-error');
+  var submitBtn = form.querySelector('.form-submit-btn');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    errorEl.classList.remove('visible');
+    submitBtn.classList.add('loading');
+    var originalLabel = submitBtn.textContent;
+    submitBtn.textContent = 'Sending…';
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { Accept: 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        window.location.href = 'thank-you.html';
+      } else {
+        throw new Error('Submission failed');
+      }
+    }).catch(function () {
+      submitBtn.classList.remove('loading');
+      submitBtn.textContent = originalLabel;
+      errorEl.classList.add('visible');
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
