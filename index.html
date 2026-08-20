@@ -52,7 +52,7 @@
 
   /* NAV */
   header { position:fixed; top:16px; left:16px; right:16px; z-index:100; }
-  .nav { max-width:1440px; margin:0 auto; background:var(--card); border:1px solid var(--line); border-radius:20px; box-shadow:var(--shadow-md); padding:0 18px; height:66px; display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:16px; }
+  .nav { max-width:1440px; margin:0 auto; background:var(--card); border:1px solid var(--line); border-radius:20px; box-shadow:var(--shadow-md); padding:0 18px; height:66px; display:grid; grid-template-columns:auto 1fr auto; align-items:center; justify-content:space-between; gap:16px; }
   .nav-logo { display:flex; align-items:center; }
   .nav-logo img { height:30px; width:auto; }
   .nav-links { display:flex; align-items:center; justify-content:center; gap:6px; }
@@ -108,6 +108,7 @@
   @media (max-width:960px) { .hero-ctas { justify-content:center; } }
   .hero-features { display:flex; flex-wrap:wrap; gap:20px; margin-top:30px; }
   @media (max-width:960px) { .hero-features { justify-content:center; } }
+  @media (max-width:640px) { .hero-features { flex-direction:column; align-items:center; } }
   .hero-feature { display:flex; align-items:center; gap:8px; font-size:13.5px; font-weight:600; color:var(--ink-soft); }
   .hero-feature svg { width:16px; height:16px; stroke:var(--green-deep); flex-shrink:0; }
 
@@ -135,7 +136,7 @@
   .browser-bar .dot.yellow { background:#ffc130; }
   .browser-bar .dot.green { background:#34c84a; }
   .browser-bar .url { flex:1; background:var(--card); border-radius:4px; padding:4px 10px; font-size:11px; color:var(--ink-soft); margin-left:6px; }
-  .browser-card-shot { position:relative; height:520px; overflow:hidden; }
+  .browser-card-shot { position:relative; aspect-ratio:742/520; overflow:hidden; }
   .browser-card-shot img { position:absolute; inset:0; width:100%; height:100%; display:block; object-fit:cover; object-position:top; transform:scale(1.05); opacity:0; animation:heroCarousel 20s infinite; }
   .browser-card-shot img:nth-child(1) { animation-delay:0s; }
   .browser-card-shot img:nth-child(2) { animation-delay:4s; }
@@ -325,6 +326,7 @@
     .hero { padding:130px 20px 80px; }
     .section { padding:60px 20px; }
     .btn-primary, .btn-secondary, .btn-dark { width:100%; max-width:320px; }
+    .enquiry-form { padding:20px; }
   }
 </style>
 </head>
