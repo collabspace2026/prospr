@@ -1,0 +1,7 @@
+.git
+.gitignore
+.wrangler
+.assetsignore
+wrangler.jsonc
+serve.ps1
+index-old-backup.html

@@ -1,0 +1,12 @@
+{
+  "name": "prospr",
+  "compatibility_date": "2026-08-20",
+  "assets": {
+    "directory": "./",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    { "pattern": "prospr.studio", "custom_domain": true },
+    { "pattern": "www.prospr.studio", "custom_domain": true }
+  ]
+}
